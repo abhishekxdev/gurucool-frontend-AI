@@ -3,9 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["images.unsplash.com", "cdn.gurucool.ai", "randomuser.me"],
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "cdn.gurucool.ai" },
+      { protocol: "https", hostname: "randomuser.me" },
+    ],
   },
-  
 };
 
 export default nextConfig;
